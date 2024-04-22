@@ -7,24 +7,32 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      #- uses: actions/checkout@v3
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     #- uses: actions/checkout@v3
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+  #     - name: Run a one-line script
+  #       run: echo Hello, world!
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+  #     - name: Run a multi-line script
+  #       run: |
+  #         echo Add other actions to build,
+  #         echo test, and deploy your project.
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Secret
-        run: echo ${{ secrets.MY_SECRET }}
+      # - name: Secret
+      #   run: echo Secret ${{ secrets.MYSECRET }}
       
-      - name: Variable
-        run: echo ${{ vars.MYVARIABLE }}
-    
+      # - name: Variable
+      #   run: echo ${{ vars.MYVARIABLE }}
+        - name: testRun
+          run: |
+            echo vars ${{ vars.MYVARIABLE }}
+            echo varsRunner ${{ vars.RUNNER }}
+            echo varsREPOSITORY_VAR  $ {{ vars.REPOSITORY_VAR  }}
+            echo xxx $ {{ xxx }}
+            echo xxx $ {{ xxx }}
+            echo xxx $ {{ xxx }}
+

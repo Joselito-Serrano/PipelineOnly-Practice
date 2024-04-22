@@ -33,7 +33,7 @@ jobs:
             echo vars.MYVARIABLE ${{ vars.MYVARIABLE }}
             echo vars.Runner ${{ vars.RUNNER }}
             echo vars.REPOSITORY_VAR  $ {{ vars.REPOSITORY_VAR  }}
-            echo xxx $ {{ xxx }}
-            echo xxx $ {{ xxx }}
+            echo testEnvironment.vars.TESTVARIABLE ${{ testEnvironment.vars.TESTVARIABLE }}
+            echo main.vars.TESTVARIABLE ${{ main.vars.TESTVARIABLE }}
             echo xxx $ {{ xxx }}
 

@@ -21,6 +21,7 @@ jobs:
   #         echo test, and deploy your project.
   test:
     runs-on: ubuntu-latest
+    environment: 'main'
     steps:
       # - name: Secret
       #   run: echo Secret ${{ secrets.MYSECRET }}
@@ -29,9 +30,9 @@ jobs:
       #   run: echo ${{ vars.MYVARIABLE }}
         - name: testRun
           run: |
-            echo vars ${{ vars.MYVARIABLE }}
-            echo varsRunner ${{ vars.RUNNER }}
-            echo varsREPOSITORY_VAR  $ {{ vars.REPOSITORY_VAR  }}
+            echo vars.MYVARIABLE ${{ vars.MYVARIABLE }}
+            echo vars.Runner ${{ vars.RUNNER }}
+            echo vars.REPOSITORY_VAR  $ {{ vars.REPOSITORY_VAR  }}
             echo xxx $ {{ xxx }}
             echo xxx $ {{ xxx }}
             echo xxx $ {{ xxx }}
